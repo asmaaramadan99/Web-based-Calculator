@@ -1,0 +1,37 @@
+button {
+    width: 75px;
+    height: 50px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin: 2px;
+    cursor: pointer;
+    background-color:#56b39b;
+    border: solid#e1e4e4;
+    border-radius: 5000000000pc;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+  
+}
+table {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 15px;
+    background-color:#555454;
+    border-radius: 5%;
+    max-width: 20px;
+
+}
+.TextView{
+    width: 320px;
+    height: 45px;
+    align-self: center;
+    margin: 10px;
+    margin-top:20px;
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 15%;
+    border-color: rgb(55, 58, 58);
+    background-color: aliceblue;
+}

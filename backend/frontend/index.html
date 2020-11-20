@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
+  </head>
+  <body>
+    
+    <div id="calculator">
+     
+      <table>
+          <tr>
+             <td colspan="8"><div type="text" value="displayOperand" name="textview"  class="textview" disabled>{{displayedOperand}}</div></td>
+          </tr>
+          <tr>
+            <td><button @click="setOperation('percentage')+singleOperandRequest()" id= "percentbtn" class="operation" type="button" value="%">%</button></td>
+            <td><button @click="clear()" id ="clearbtn" class= "clear" type="button">CE</button></td>
+            <td><button @click="clear()" id ="clear2btn" type="clear">C</button></td>
+            <td><button @click="setOperation('divide')"id = "backbtn" value= "/" type="button">÷</button></td>
+          </tr>
+          <td><button @click="setOperation('multiplicativeInverse')+ singleOperandRequest()" id="oneOverX" class= "operation" type="button">1/x</button></td>
+            <td><button  @click ="setOperation('square') + singleOperandRequest()" id="squareX" class= "operation" type="button">x²</button></td>
+            <td><button  @click= "setOperation('getRoot') + singleOperandRequest()" id="sqrtX" class= "operation" type="button">√</td>
+            <td><button @click="backSpace()" id="backSpace" class="back" type="button">⌫</button></td>
+          <tr>
+            <td><button @click="setOperandValue(7)" id= "btn7" value ='7'  class="operand" type="button">7</button></td>
+            <td><button @click="setOperandValue(8)"class= "operand" type="button">8</button></td>
+            <td><button @click="setOperandValue(9)" class= "operand" type="button">9</button></td>
+            <td><button @click="setOperation('multiply')"id = "multiply" class= "operation" type="button">*</button></td>
+              
+        </tr>
+        <td><button  @click="setOperandValue(4)"   class="operand" type="button">4</button></td>
+        <td><button @click="setOperandValue(5)" class= "operand" type="button">5</button></td>
+        <td><button @click="setOperandValue(6)" class= "operand" type="button">6</button></td>
+        <td><button @click="setOperation('minus')"id = "minus" value ='-' class="operation" type="button">-</button></td>
+        <tr>
+            <td><button @click="setOperandValue(1)" class="operand" type="button">1</button></td>
+            <td><button @click="setOperandValue(2)" class= "operand" type="button">2</button></td>
+            <td><button @click="setOperandValue(3)" class="operand" type="button">3</button></td>
+            <td><button @click="setOperation('plus')" id = "plus" value ='+' class="operation" type="button">+</button></td>
+              
+        </tr>
+        <td><button @click ="setOperation('additive inverse') + singleOperandRequest()"id= "additiveInverse" class="operation" type="button">+/-</button></td>
+            <td><button @click="setOperandValue(0)" class= "operand" type="button">0</button></td>
+            <td><button @click="setOperandValue('.')"id ="decimalPoint" type="button">.</button></td>
+            <td><button @click="tryExpression()" id = "equal" type="button">=</button></td>
+     
+      </table>
+    
+      
+    
+    </div>
+
+    <!-- Import Js -->
+    <script src="main.js"></script>
+    <script> const mountedCalculator = calculator.$mount('#calculator') </script>
+  </body>
+</html>
+
+
